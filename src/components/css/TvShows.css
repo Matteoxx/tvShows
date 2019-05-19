@@ -1,0 +1,20 @@
+#book-container {
+  padding: 1rem;
+  background-color: #1c2a39;
+  min-height: 90vh;
+}
+
+#book-container input {
+  height: 2.5rem;
+  width: 100%;
+}
+
+#tvshow-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#tvshow-container .singleShow {
+  margin: 1rem;
+}

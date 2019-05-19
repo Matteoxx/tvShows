@@ -1,0 +1,73 @@
+#container {
+  background-image: url(https://images.pexels.com/photos/133070/pexels-photo-133070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+#container button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#container h1.welcome {
+  font-size: 3rem;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0.7rem;
+}
+
+#container .form-container {
+  background-color: white;
+  padding: 0 1.5rem 0.5rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#container .form-container h1.form-title {
+  color: black;
+}
+#container .form-container p.form-desc {
+  color: black;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+#container .form-container input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+#container .form-container p {
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#container .form-container span.error-msg {
+  color: red;
+  font-size: 12px;
+}
+
+#container .form-container span {
+  color: red;
+}
