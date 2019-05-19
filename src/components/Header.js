@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import fire from "../config/Fire";
 import { Link } from "react-router-dom";
 
+import "./css/Header.css";
+
 export default class Header extends Component {
   logout = () => {
     fire.auth().signOut();
@@ -9,19 +11,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div
-        className="container"
-        style={{
-          backgroundColor: "#ff4b2b",
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          color: "white",
-          padding: "0.5rem",
-          height: "10vh",
-          textAlign: "center"
-        }}
-      >
+      <div id="header-container">
         <Link
           to="/"
           style={{
@@ -34,23 +24,19 @@ export default class Header extends Component {
           BestFilms
         </Link>
 
-        <button
-          onClick={this.logout}
-          style={{
-            bordeeRadius: "20px",
-            border: "1px solid #ff4b2b",
-            backgroundColor: "#fff",
-            color: "#ff4b2b",
-            fontSize: "12px",
-            fontWeight: "bold",
-            padding: "5px 10px",
-            letterSpacing: "1px",
-            textTransform: "uppercase"
-          }}
-        >
-          Wyloguj
+        <button onClick={this.logout}>
+          <Link
+            to="/"
+            style={{
+              margin: "0",
+              padding: "0",
+              textDecoration: "none",
+              color: "#ff4b2b"
+            }}
+          >
+            Wyloguj{" "}
+          </Link>
         </button>
-        {/* // ) : null} */}
       </div>
     );
   }

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import "./css/TvShow.css";
+
 class TvShow extends Component {
   state = {
     name: "",
@@ -50,27 +52,15 @@ class TvShow extends Component {
     let premiered = this.state.premiered.slice(0, 4);
 
     return (
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          padding: "1rem",
-          backgroundColor: "#1C2A39",
-          color: "white",
-          height: "100vh"
-        }}
-      >
+      <div id="single-tvshow-container">
         <div className="image-container">
           <img src={this.state.imageMedium} alt="" />
         </div>
-        <div className="description" style={{ paddingLeft: "1rem" }}>
+        <div className="description">
           <h2>{this.state.name}</h2>
           <span>
-            <i
-              className="fas fa-star"
-              style={{ color: "gold", marginRight: "5px" }}
-            />
-            {this.state.ratingAverage}/10{" "}
+            <i className="fas fa-star" />
+            {this.state.ratingAverage}/10
           </span>
 
           <p>Premiered: {premiered}</p>
