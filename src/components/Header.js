@@ -1,7 +1,12 @@
 import React, { Component } from "react";
+import fire from "../config/Fire";
 import { Link } from "react-router-dom";
 
 export default class Header extends Component {
+  logout = () => {
+    fire.auth().signOut();
+  };
+
   render() {
     return (
       <div
@@ -11,7 +16,8 @@ export default class Header extends Component {
           display: "flex",
           flexDirection: "row",
           color: "white",
-          padding: "0.5rem"
+          padding: "0.5rem",
+          height: "10vh"
         }}
       >
         <span>
@@ -19,34 +25,12 @@ export default class Header extends Component {
             to="/"
             style={{ textDecoration: "none", color: "white", fontSize: "2rem" }}
           >
-            TheBestFilms
+            BestFilms
           </Link>
         </span>
-        <ul
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            listStyleType: "none",
-            justifyContent: "flex-end"
-          }}
-        >
-          <li>
-            <Link
-              to="/tvshows"
-              style={{ textDecoration: "none", color: "white", margin: "5px" }}
-            >
-              TvShows
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/login"
-              style={{ textDecoration: "none", color: "white", margin: "5px" }}
-            >
-              Login
-            </Link>
-          </li>
-        </ul>
+        {/* {this.props.userLoggedIn ? ( */}
+        <button onClick={this.logout}>Wyloguj</button>
+        {/* // ) : null} */}
       </div>
     );
   }

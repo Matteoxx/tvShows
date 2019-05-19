@@ -3,7 +3,7 @@ import TvShows from "./components/TvShows";
 import TvShow from "./components/TvShow";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
-import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 import fire from "./config/Fire";
 
@@ -14,7 +14,6 @@ import "./App.css";
 class App extends Component {
   state = {
     user: null
-    // userLoggedIn: false
   };
 
   componentDidMount() {
@@ -23,9 +22,6 @@ class App extends Component {
 
   authListener = () => {
     fire.auth().onAuthStateChanged(user => {
-      // this.setState({
-      //   userLoggedIn: !this.state.userLoggedIn
-      // });
       if (user) {
         this.setState({ user });
       } else {
@@ -44,13 +40,13 @@ class App extends Component {
             <Route
               exact
               path="/"
-              // component={this.state.user ? TvShows : Login}
-              component={LandingPage}
+              component={this.state.user ? TvShows : LandingPage}
             />
           </Switch>
-          {/* <Switch>
-            <Route exact path="/tvshows" component={TvShows} />
-          </Switch> */}
+
+          <Switch>
+            <Route exact path="/signup" component={Signup} />
+          </Switch>
           <Switch>
             <Route exact path="/tvshows/:id" component={TvShow} />
           </Switch>
