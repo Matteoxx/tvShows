@@ -1,0 +1,16 @@
+#single-tvshow-container {
+  display: flex;
+  padding: 1rem;
+  background-color: #1c2a39;
+  color: white;
+  height: 100vh;
+}
+
+#single-tvshow-container div.description {
+  padding-left: 1rem;
+}
+
+#single-tvshow-container div.description i {
+  color: gold;
+  margin-right: 5px;
+}
