@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class TvShows extends Component {
   state = {
@@ -30,13 +31,16 @@ export default class TvShows extends Component {
       >
         {tvshows.map(tvshow => (
           <div
+            key={tvshow.id}
             className="tvshow"
             style={{
               margin: "1rem",
               color: "white"
             }}
           >
-            <img src={tvshow.image.medium} alt="" />
+            <Link to={`/tvshows/${tvshow.id}`}>
+              <img src={tvshow.image.medium} alt="" />
+            </Link>
           </div>
         ))}
       </div>
