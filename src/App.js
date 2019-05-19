@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TvShows from "./components/TvShows";
 import TvShow from "./components/TvShow";
+import Header from "./components/Header";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -11,6 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Header />
           <Switch>
             <Route exact path="/tvshows" component={TvShows} />
           </Switch>
