@@ -34,7 +34,7 @@ export default class Header extends Component {
               color: "#ff4b2b"
             }}
           >
-            Wyloguj{" "}
+            Log out
           </Link>
         </button>
       </div>
