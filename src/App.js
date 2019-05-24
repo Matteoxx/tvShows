@@ -4,6 +4,7 @@ import TvShow from "./components/TvShow";
 import Header from "./components/Header";
 import LandingPage from "./components/LandingPage";
 import Signup from "./components/Signup";
+import { ProtectedRoute } from "./components/protected.route";
 
 import fire from "./config/Fire";
 
@@ -37,18 +38,11 @@ class App extends Component {
           {this.state.user ? <Header /> : null}
 
           <Switch>
-            <Route
-              exact
-              path="/"
-              component={this.state.user ? TvShows : LandingPage}
-            />
-          </Switch>
-
-          <Switch>
+            <Route exact path="/" component={LandingPage} />
             <Route exact path="/signup" component={Signup} />
-          </Switch>
-          <Switch>
-            <Route exact path="/tvshows/:id" component={TvShow} />
+            <ProtectedRoute exact path="/tvshows" component={TvShows} />
+            <ProtectedRoute exact path="/tvshows/:id" component={TvShow} />
+            <Route path="*" component={() => "404 NOT FOUND"} />
           </Switch>
         </div>
       </Router>

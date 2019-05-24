@@ -13,7 +13,7 @@ export default class Header extends Component {
     return (
       <div id="header-container">
         <Link
-          to="/"
+          to="/tvshows"
           style={{
             textDecoration: "none",
             color: "white",
