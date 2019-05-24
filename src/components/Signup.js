@@ -40,7 +40,7 @@ export default class Signin extends Component {
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then(u => {})
         .then(u => {
-          this.props.history.push("/");
+          this.props.history.push("/tvshows");
         })
         .catch(error => {});
     }
