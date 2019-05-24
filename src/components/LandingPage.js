@@ -21,7 +21,7 @@ export default class LandingPage extends Component {
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
       .then(u => {
-        this.props.history.push("/");
+        this.props.history.push("/tvshows");
       })
       .catch(error => {
         this.setState({
